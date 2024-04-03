@@ -1,0 +1,9 @@
+---
+- name: Python installation
+  hosts: centos
+  become: true
+  vars:
+    python_version_default: 3.9.16
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+  roles:
+    - role: "ansible-python37-centos7"
